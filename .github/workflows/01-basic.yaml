@@ -12,7 +12,7 @@ jobs:
     
     steps:
       - name: 저장소 코드 가져오기
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
 
       - name: 메세지 출력
         run: echo "GitHub Actions Python Basic Workflow Running"
