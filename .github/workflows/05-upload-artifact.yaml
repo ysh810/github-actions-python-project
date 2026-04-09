@@ -3,7 +3,7 @@ name: 05 Upload Artifact Workflow
 on:
   push:
     branches:
-      - 'main'
+      - '!main'
 
 jobs:
   upload-artifact:
