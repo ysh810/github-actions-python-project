@@ -3,7 +3,7 @@ name: 04 Generate Report Workflow
 on:
   push:
     branches:
-      - 'main'
+      - '!main'
 
 jobs:
   generate-report:
