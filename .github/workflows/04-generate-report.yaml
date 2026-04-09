@@ -1,14 +1,14 @@
-name: 02 Python Run Workflow
+name: 04 Generate Report Workflow
 
 on:
   push:
     branches:
-      - '!main'
+      - 'main'
 
 jobs:
-  run-python:
+  generate-report:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 저장소 코드 가져오기
         uses: actions/checkout@v4
@@ -18,11 +18,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Python 버전 확인
-        run: python --version
+      - name: 리포트 파일 생성
+        run: python generate_report.py
 
-      - name: Python 실행
-        run: python app.py
-      
-      - name: 파일 목록 확인
-        run: ls -al
+      - name: 생성 결과 확인
+        run: cat report.txt
